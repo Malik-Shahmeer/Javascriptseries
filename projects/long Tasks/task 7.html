@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body style="background-color: #212121;color: #fff; ">
+    
+
+           
+          
+</body>
+<script>
+    /*Task 7: Create a Card Component
+Build a "card" with a title, an image, and a description.
+Append the card to a container in the DOM.*/
+
+const card = document.createElement('div');
+const title = document.createElement('h3');
+title.textContent = "Card Title";
+const img = document.createElement('img');
+img.src = "https://i.pinimg.com/736x/96/b5/ee/96b5ee08682530a387a875141230aa2c.jpg";
+img.alt = "Card Image";
+const description = document.createElement('p');
+description.textContent = "This is a description of the card. It provides additional information.";
+card.style.border = "1px solid #ccc";
+card.style.borderRadius = "8px";
+card.style.padding = "16px";
+card.style.margin = "16px";
+card.style.width = "300px";
+card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+card.style.textAlign = "center";
+img.style.width = "100%";
+img.style.borderRadius = "8px";
+img.style.marginBottom = "12px";
+card.appendChild(title);
+card.appendChild(img);
+card.appendChild(description);
+document.body.appendChild(card);
+    </script>
+    </html>

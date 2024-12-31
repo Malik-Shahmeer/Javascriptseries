@@ -39,237 +39,24 @@
 </body>
 <script>
 
-/*Task 1: Create a List of Items
-Create an empty <ul> in your HTML.
-Dynamically generate 5 <li> items with text like "Item 1", "Item 2", etc., and append them to the <ul>.*/
 
-/*const ul = document.getElementById('item-list')
-for (let i = 1;i <= 5 ; i++) {
-    const li =document.createElement('li')
-li.textContent = `item ${i}`
-ul.appendChild(li)}*/
 
-/*Task 2   Dynamically create a button with the text "Click Me".
-Append it to the page inside a specific container.
-Style the button with a background color, padding, and border.*/
 
-/*const container = document.getElementById('button-container')
-const button = document.createElement('button')
-button.textContent = 'click me'
-button.style.backgroundColor = 'blue';
-button.style.color = 'white';
-button.style.padding = '10px 20px'; 
-button.style.border = '2px solid black'; 
-button.style.borderRadius = '5px';
-button.style.cursor = 'pointer';
-container.appendChild(button)*/
 
-/*Task 3: Build a Form
-Create a form with two input fields: one for "Name" and one for "Email".
-Add a submit button to the form.
-Append the form to the DOM.*/
 
-/*const container = document.getElementById('form-container')
-const form = document.createElement('form')
-form.setAttribute('action', '#')
-form.setAttribute('method','POST')
-const nameInput = document.createElement('input')
-nameInput.setAttribute('type','text')
-nameInput.setAttribute('name', 'name')
-nameInput.setAttribute('placeholder','Enter Your Name')
-const emailInput = document.createElement('input')
-emailInput.setAttribute('type','text')
-emailInput.setAttribute('email','email')
-emailInput.setAttribute('placeholder','Enter Your Email')
-const submitButton = document.createElement('button')
-submitButton.setAttribute('type', 'submit');
-submitButton.textContent = 'Submit';
-form.appendChild(nameInput)
-form.appendChild(emailInput)
-form.appendChild(submitButton)
-container.appendChild(form)
-form.style.display = 'flex';
-form.style.flexDirection = 'column';
-form.style.gap = '10px';
-form.style.width = '300px';
-nameInput.style.padding = '10px';
-emailInput.style.padding = '10px';
-nameInput.style.border = '1px solid #ccc';
-emailInput.style.border = '1px solid #ccc';
-submitButton.style.padding = '10px';
-submitButton.style.backgroundColor = 'blue';
-submitButton.style.color = 'white';
-submitButton.style.border = 'none';
-submitButton.style.cursor = 'pointer';
-submitButton.style.borderRadius = '5px';*/
 
-/*Task 4: Add a Notification
-Create a new <div> with a message like "This is a notification!".
-Add some styling (background color, padding).
-Make the notification automatically disappear after 3 seconds.*/
 
-/*const notification = document.createElement('div');
-notification.textContent = "This is a notification!";
-notification.style.backgroundColor = "#f8d7da";
-notification.style.color = "#721c24";
-notification.style.padding = "10px 20px";
-notification.style.borderRadius = "5px";
-notification.style.margin = "10px 0";
-notification.style.position = "fixed";
-notification.style.top = "10px";
-notification.style.right = "10px";
-notification.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
-document.body.appendChild(notification);
-setTimeout(() => {
-  notification.remove();
-}, 3000);*/
 
-/*Task 5: Create an Image Gallery
-Dynamically generate 4 <img> elements with different image sources.
-Append them to the page in a grid-like format.*/
 
-/*const imageSources = [
-  'https://i.pinimg.com/originals/08/e5/97/08e597e1addb5f2aab9ae3ac4820b285.gif',
-  'https://i.pinimg.com/originals/08/e5/97/08e597e1addb5f2aab9ae3ac4820b285.gif',
-  'https://i.pinimg.com/originals/08/e5/97/08e597e1addb5f2aab9ae3ac4820b285.gif',
-  'https://i.pinimg.com/originals/08/e5/97/08e597e1addb5f2aab9ae3ac4820b285.gif'
-];
-const images = imageSources.map(src => {
-  const img = document.createElement('img');
-  img.src = src;
-  img.alt = "Gallery Image";
-  img.style.width = '100%';
-  return img;
-});
-const galleryContainer = document.createElement('div');
-galleryContainer.style.display = 'grid';
-galleryContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
-galleryContainer.style.gap = '10px';
-galleryContainer.style.maxWidth = '400px';
-galleryContainer.style.margin = '0 auto';
-images.forEach(img => galleryContainer.appendChild(img));
-document.body.appendChild(galleryContainer);*/
  
-/*Task 6: Build a Table
-Create a table with 3 rows and 3 columns.
-Populate each cell with text like "Row 1, Column 1".
-Style the table with borders and padding.*/
 
-/*const table = document.createElement('table');
-for (let row = 1; row <= 3; row++) {
-  const tr = document.createElement('tr');
-for (let col = 1; col <= 3; col++) {
-    const td = document.createElement('td');
-    td.textContent = `Row ${row}, Column ${col}`;
-    tr.appendChild(td);
-  }
-    table.appendChild(tr);
-}
-table.style.borderCollapse = 'collapse';
-table.style.margin = '20px auto';
-const cells = table.getElementsByTagName('td');
-for (let cell of cells) {
-  cell.style.border = '1px solid #000';
-  cell.style.padding = '10px';
-  cell.style.textAlign = 'center';
-}
-document.body.appendChild(table);*/
 
-/*Task 7: Create a Card Component
-Build a "card" with a title, an image, and a description.
-Append the card to a container in the DOM.*/
 
-/*const card = document.createElement('div');
-const title = document.createElement('h3');
-title.textContent = "Card Title";
-const img = document.createElement('img');
-img.src = "https://i.pinimg.com/736x/96/b5/ee/96b5ee08682530a387a875141230aa2c.jpg";
-img.alt = "Card Image";
-const description = document.createElement('p');
-description.textContent = "This is a description of the card. It provides additional information.";
-card.style.border = "1px solid #ccc";
-card.style.borderRadius = "8px";
-card.style.padding = "16px";
-card.style.margin = "16px";
-card.style.width = "300px";
-card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-card.style.textAlign = "center";
-img.style.width = "100%";
-img.style.borderRadius = "8px";
-img.style.marginBottom = "12px";
-card.appendChild(title);
-card.appendChild(img);
-card.appendChild(description);
-document.body.appendChild(card);*/
 
-/*Task 8: Add Dynamic Links
-Create 3 anchor (<a>) tags with different URLs and labels like "Google", "YouTube", etc.
-Append them to the DOM and style them.*/
 
-/*const linksData = [
-  { label: "Google", url: "https://www.google.com" },
-  { label: "YouTube", url: "https://www.youtube.com" },
-  { label: "Wikipedia", url: "https://www.wikipedia.org" }
-];
-const links = linksData.map(link => {
-  const a = document.createElement('a');
-  a.href = link.url;
-  a.textContent = link.label;
-  a.target = "_blank";
-  a.style.color = "blue";
-  a.style.textDecoration = "none";
-  a.style.marginRight = "10px";
-  a.style.fontSize = "16px";
-  a.style.fontWeight = "bold";
-  a.addEventListener("mouseover", () => {
-    a.style.textDecoration = "underline";
-  });
-  a.addEventListener("mouseout", () => {
-    a.style.textDecoration = "none";
-  });
-  return a;
-});
-const container = document.createElement('div');
-links.forEach(link => container.appendChild(link));
-document.body.appendChild(container);*/
 
-/*Task 9: Create a Quote Generator
-Dynamically create a block for a random quote with a button below it.
-When the button is clicked, the quote text should update.*/
 
-/*const quotes = [
-    "The best way to predict the future is to create it.",
-    "Life is 10% what happens to us and 90% how we react to it.",
-    "Success usually comes to those who are too busy to be looking for it.",
-    "Do not watch the clock. Do what it does. Keep going.",
-    "You are never too old to set another goal or to dream a new dream."
-];
-const container = document.getElementById('quote-generator');
-const quoteElement = document.createElement('p');
-quoteElement.id = 'quote';
-quoteElement.textContent = quotes[0]; 
-const button = document.createElement('button');
-button.textContent = 'New Quote';
-container.appendChild(quoteElement);
-container.appendChild(button);
-button.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    quoteElement.textContent = quotes[randomIndex];
-});*/
 
-/*Task 10: Build a Dropdown Menu
-Create a <select> element dynamically with 5 <option> items.
-Append it to a form or a specific section of the page.*/
 
-/*const form = document.getElementById('dropdown-form');
-const dropdown = document.createElement('select');
-dropdown.id = 'options'; 
-for (let i = 1; i <= 5; i++) {
-    const option = document.createElement('option');
-    option.value = `value${i}`;
-    option.textContent = `Option ${i}`;
-    dropdown.appendChild(option);
-}
-form.appendChild(dropdown);*/
 </script>
 </html>

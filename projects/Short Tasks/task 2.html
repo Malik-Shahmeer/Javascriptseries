@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff">
+   
+    <p id="text"></p>
+</body>
+<script>
+ /* Task 2: Add a Paragraph
+Create a <p> element with some text like "This is a new paragraph."
+Append it to a specific section of your page.*/
+
+const section = document.getElementById('container')
+const paragraph= document.createElement('p')
+paragraph.textContent='This is a new paragraph'
+section.appendChild(paragraph)
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body style="background-color: #212121;color: #fff; ">
+    
+           
+           <div id="form-container"></div>
+           </body>
+<script>
+    /*Task 3: Build a Form
+Create a form with two input fields: one for "Name" and one for "Email".
+Add a submit button to the form.
+Append the form to the DOM.*/
+
+const container = document.getElementById('form-container')
+const form = document.createElement('form')
+form.setAttribute('action', '#')
+form.setAttribute('method','POST')
+const nameInput = document.createElement('input')
+nameInput.setAttribute('type','text')
+nameInput.setAttribute('name', 'name')
+nameInput.setAttribute('placeholder','Enter Your Name')
+const emailInput = document.createElement('input')
+emailInput.setAttribute('type','text')
+emailInput.setAttribute('email','email')
+emailInput.setAttribute('placeholder','Enter Your Email')
+const submitButton = document.createElement('button')
+submitButton.setAttribute('type', 'submit');
+submitButton.textContent = 'Submit';
+form.appendChild(nameInput)
+form.appendChild(emailInput)
+form.appendChild(submitButton)
+container.appendChild(form)
+form.style.display = 'flex';
+form.style.flexDirection = 'column';
+form.style.gap = '10px';
+form.style.width = '300px';
+nameInput.style.padding = '10px';
+emailInput.style.padding = '10px';
+nameInput.style.border = '1px solid #ccc';
+emailInput.style.border = '1px solid #ccc';
+submitButton.style.padding = '10px';
+submitButton.style.backgroundColor = 'blue';
+submitButton.style.color = 'white';
+submitButton.style.border = 'none';
+submitButton.style.cursor = 'pointer';
+submitButton.style.borderRadius = '5px';
+    </script>
+    </html>

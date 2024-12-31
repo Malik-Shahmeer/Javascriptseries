@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body style="background-color: #212121;color: #fff; ">
+    
+          
+           <div id="quote-generator"></div>
+          
+           <style>
+              
+       #quote {
+            font-size: 1.5em;
+            margin: 20px;
+            text-align: center;/
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+   
+
+    </style>
+           
+          
+</body>
+<script>
+    /*Task 9: Create a Quote Generator
+Dynamically create a block for a random quote with a button below it.
+When the button is clicked, the quote text should update.*/
+
+const quotes = [
+    "The best way to predict the future is to create it.",
+    "Life is 10% what happens to us and 90% how we react to it.",
+    "Success usually comes to those who are too busy to be looking for it.",
+    "Do not watch the clock. Do what it does. Keep going.",
+    "You are never too old to set another goal or to dream a new dream."
+];
+const container = document.getElementById('quote-generator');
+const quoteElement = document.createElement('p');
+quoteElement.id = 'quote';
+quoteElement.textContent = quotes[0]; 
+const button = document.createElement('button');
+button.textContent = 'New Quote';
+container.appendChild(quoteElement);
+container.appendChild(button);
+button.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    quoteElement.textContent = quotes[randomIndex];
+});
+    </script>
+    </html>

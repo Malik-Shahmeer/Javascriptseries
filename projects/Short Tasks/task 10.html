@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff">
+   
+</body>
+<script>
+    /*Task 10: Add a Dynamic Title
+Create a <title> element for your 
+page dynamically and set it to a custom 
+title like "Practice DOM Tasks".*/
+
+const headElement = document.head;
+const titleElement = document.createElement('title');
+titleElement.textContent = 'Practice DOM Tasks';
+headElement.appendChild(titleElement);
+document.title = 'New Title';
+if (document.title) {
+    document.title = 'Updated Title';
+} else {
+    const titleElement = document.createElement('title');
+    titleElement.textContent = 'New Title';
+    document.head.appendChild(titleElement);
+}
+document.title = 'You clicked a button!';
+const dynamicTitle = prompt('Enter a custom title for this page:');
+document.title = dynamicTitle;
+</script>
+</html>

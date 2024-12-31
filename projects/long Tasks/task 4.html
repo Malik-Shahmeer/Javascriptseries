@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body style="background-color: #212121;color: #fff; ">
+    
+         
+           <style>
+              
+      
+        form {
+            margin: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 1em;
+        }
+
+    </style>
+           
+          
+</body>
+<script>
+    /*Task 4: Add a Notification
+Create a new <div> with a message like "This is a notification!".
+Add some styling (background color, padding).
+Make the notification automatically disappear after 3 seconds.*/
+
+const notification = document.createElement('div');
+notification.textContent = "This is a notification!";
+notification.style.backgroundColor = "#f8d7da";
+notification.style.color = "#721c24";
+notification.style.padding = "10px 20px";
+notification.style.borderRadius = "5px";
+notification.style.margin = "10px 0";
+notification.style.position = "fixed";
+notification.style.top = "10px";
+notification.style.right = "10px";
+notification.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+document.body.appendChild(notification);
+setTimeout(() => {
+  notification.remove();
+}, 3000);
+    </script>
+    </html>

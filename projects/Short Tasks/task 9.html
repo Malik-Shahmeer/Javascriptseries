@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff">
+  
+</body>
+<style>
+     .warning {
+            background-color: red;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+</style>
+<script>
+    /*Task 9: Generate a Warning
+Dynamically create a <div> with the text "Warning: This is a critical alert!".
+Style it with a red background and white text, then append it to your page.*/
+
+const warningDiv = document.createElement('div');
+warningDiv.textContent = 'Warning: This is a critical alert!';
+warningDiv.style.backgroundColor = 'red'; 
+warningDiv.style.color = 'white';
+warningDiv.style.fontSize = '1.2em'; 
+warningDiv.style.fontWeight = 'bold';
+warningDiv.style.textAlign = 'center'; 
+warningDiv.style.padding = '15px'; 
+warningDiv.style.margin = '20px 0'; 
+warningDiv.style.borderRadius = '5px';
+document.body.appendChild(warningDiv);
+setTimeout(() => warningDiv.remove(), 5000);
+</script>
+</html>

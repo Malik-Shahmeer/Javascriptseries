@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body style="background-color: #212121;color: #fff; ">
+</body>
+<script>
+    /*Task 6: Build a Table
+Create a table with 3 rows and 3 columns.
+Populate each cell with text like "Row 1, Column 1".
+Style the table with borders and padding.*/
+
+const table = document.createElement('table');
+for (let row = 1; row <= 3; row++) {
+  const tr = document.createElement('tr');
+for (let col = 1; col <= 3; col++) {
+    const td = document.createElement('td');
+    td.textContent = `Row ${row}, Column ${col}`;
+    tr.appendChild(td);
+  }
+    table.appendChild(tr);
+}
+table.style.borderCollapse = 'collapse';
+table.style.margin = '20px auto';
+const cells = table.getElementsByTagName('td');
+for (let cell of cells) {
+  cell.style.border = '1px solid #000';
+  cell.style.padding = '10px';
+  cell.style.textAlign = 'center';
+}
+document.body.appendChild(table);
+    </script>
+    </html>

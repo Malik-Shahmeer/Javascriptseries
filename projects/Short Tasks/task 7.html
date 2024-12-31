@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff">
+ 
+</body>
+<style>
+     #list-container {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        ol {
+            background-color: #141441;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        li {
+            margin: 5px 0;
+        }
+</style>
+<script>
+    /*Task 7: Create a Custom List
+Dynamically create an ordered list (<ol>).
+Add 4 list items with custom text like "Step 1", "Step 2", etc., and append them to the <ol>.*/
+
+const container = document.getElementById('list-container');
+const orderedList = document.createElement('ol');
+for (let i = 1; i <= 4; i++) {
+  const listItem = document.createElement('li');
+  listItem.textContent = `Step ${i}: This is the description for step ${i}`
+  orderedList.appendChild(listItem);
+}
+container.appendChild(orderedList);
+</script>
+</html>

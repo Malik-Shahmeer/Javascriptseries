@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body style="background-color: #212121;color: #fff; ">
+    
+        
+     
+           
+          
+</body>
+<script>
+    /*Task 5: Create an Image Gallery
+Dynamically generate 4 <img> elements with different image sources.
+Append them to the page in a grid-like format.*/
+
+const imageSources = [
+  'https://i.pinimg.com/originals/08/e5/97/08e597e1addb5f2aab9ae3ac4820b285.gif',
+  'https://i.pinimg.com/originals/08/e5/97/08e597e1addb5f2aab9ae3ac4820b285.gif',
+  'https://i.pinimg.com/originals/08/e5/97/08e597e1addb5f2aab9ae3ac4820b285.gif',
+  'https://i.pinimg.com/originals/08/e5/97/08e597e1addb5f2aab9ae3ac4820b285.gif'
+];
+const images = imageSources.map(src => {
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = "Gallery Image";
+  img.style.width = '100%';
+  return img;
+});
+const galleryContainer = document.createElement('div');
+galleryContainer.style.display = 'grid';
+galleryContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+galleryContainer.style.gap = '10px';
+galleryContainer.style.maxWidth = '400px';
+galleryContainer.style.margin = '0 auto';
+images.forEach(img => galleryContainer.appendChild(img));
+document.body.appendChild(galleryContainer);
+    </script>
+    </html>
