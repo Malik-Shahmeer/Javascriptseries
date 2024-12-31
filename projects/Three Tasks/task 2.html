@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff">
+    
+</body>
+<script>
+    /*Task 2: Create a Button and Change Text
+Create a button dynamically with the text "Click Me".
+When clicked, update the text of an existing <p> element on the page.*/
+
+const body = document.body;
+const button = document.createElement('button');
+button.textContent = 'Click Me';
+body.appendChild(button);
+button.addEventListener('click', () => {
+  const paragraph = document.getElementById('text');
+  paragraph.textContent = 'The text has been updated!';
+});
+  </script>
+  </html>

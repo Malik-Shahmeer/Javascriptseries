@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff">
+    
+</body>
+<div id="unorderlist"></div>
+<script>
+    /*Task 1: Add a List of Items
+Start with an empty <ul>.
+Dynamically generate and append 5 <li> items with text like "Task 1", "Task 2", etc.*/
+
+const ul=document.getElementById('unorderlist')
+for (let i = 1; i <= 5; i++) {
+    const li=document.createElement('li')
+    li.textContent=`Task ${i}`
+    ul.appendChild(li)
+}
+  </script>
+  </html>

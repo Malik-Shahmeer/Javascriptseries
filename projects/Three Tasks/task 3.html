@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff">
+    
+</body>
+<div id="tableContainer"></div>
+<script>
+    /*Task 3: Build a Dynamic Table
+Create a table with 3 rows and 4 columns.
+Populate each cell with text like "Row 1, Col 1".
+Append the table to a container.*/
+
+const container = document.getElementById('tableContainer');
+const table = document.createElement('table');
+for (let i = 1; i <= 3; i++) {
+    const row = table.insertRow(); 
+    for (let j = 1; j <= 4; j++) { 
+    const cell = row.insertCell();
+    cell.textContent = `Row ${i}, Col ${j}`;
+  }
+}
+container.appendChild(table);
+table.style.borderCollapse = 'collapse';
+table.style.width = '100%';
+const cells = table.querySelectorAll('td, th');
+cells.forEach(cell => {
+    cell.style.border = '1px solid black';
+    cell.style.padding = '8px';
+    cell.style.textAlign = 'left';
+});
+  </script>
+  </html>
