@@ -5,19 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
     <div>
-        <ul>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+        <ul id="images">
+           <li><img width="200px" id="bird" src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt=""></li>
+           <li><img width="200px" id="Butterfly" src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg" alt=""></li>
+           <li><img width="200px" id="Horse" src="https://media.istockphoto.com/id/2153544432/photo/group-of-kazakh-eagle-hunters-riding-horses-crossing-river-bayan-olgii-west-mongolia.jpg?s=2048x2048&w=is&k=20&c=UzoxfGEZv7gKo1HJviXBTgIiwSUFe0BtQwpLawKooM8=" alt=""></li>
+           <li><img width="200px" id="Hills" src="https://plus.unsplash.com/premium_photo-1712016875004-6a4ad04d53e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGhvdG98ZW58MHx8MHx8fDA%3D" alt=""></li>
+           <li><img width="200px" id="car" src="https://images.unsplash.com/photo-1589057002644-569a7e82e77d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBob3RvfGVufDB8fDB8fHww" alt=""></li>
+           <li><a href="https://www.google.com/" style="color: aliceblue;" id="google">Google</a></li>
         </ul>
     </div>
 </body>
-</html>
+<script>
+    // document.getElementById('image-four').addEventListener('click', function(e){
+    //     alert('You click on the image four')
+    // },false)
+    // document.getElementById('image-four').addEventListener('click',function(e){
+    // console.log(e);})
+   /* document.getElementById('images').addEventListener('click',function(e){
+        console.log('click inside the ul')
+    },false)
+    document.getElementById('image-three').addEventListener('click',function(e){
+        console.log('image three clicked')
+        e.stopPropagation()
+    },false )
+
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault()
+        console.log("'google clicked'")
+        e.stopPropagation()
+    }
+)*/
+ document.querySelector('#images').addEventListener
+ ('click',function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+    console.log(e.target.id);
+    let removeIt = e.target.parentNode
+    removeIt.remove()}
+ })
+</script>
+</html>  
