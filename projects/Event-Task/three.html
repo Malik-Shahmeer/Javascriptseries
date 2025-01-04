@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Focus and Blur Example</h2>
+    <input type="text" placeholder="Click to focus" id="inputField">
+  
+    <script>
+      const inputField = document.getElementById("inputField");
+  
+      inputField.addEventListener("focus", () => {
+        inputField.style.borderColor = "blue";
+      });
+  
+    
+      inputField.addEventListener("blur", () => {
+        inputField.style.borderColor = "gray";
+      });
+    </script>
+    </body>
+</html>

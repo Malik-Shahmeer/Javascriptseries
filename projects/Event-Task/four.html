@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+    <style>
+        #display {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Press any key!</h1>
+    <div id="display">Key Pressed: None</div>
+
+    <script>
+      
+        const display = document.getElementById('display');
+
+      
+        document.addEventListener('keydown', function(event) {
+         
+            display.textContent = 'Key Pressed: ' + event.key;
+        });
+    </script>
+</body>
+</html>

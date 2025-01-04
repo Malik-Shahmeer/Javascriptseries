@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Over Effect</title>
+  <style>
+    .hover-box {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="hover-box" id="hoverDiv">Hover over me!</div>
+
+  <script>
+    const hoverDiv = document.getElementById('hoverDiv');
+    hoverDiv.addEventListener('mouseover', () => {
+      hoverDiv.style.backgroundColor = 'lightblue';
+    });
+    hoverDiv.addEventListener('mouseout', () => {
+      hoverDiv.style.backgroundColor = 'lightgray';
+    });
+  </script>
 </body>
 </html>
